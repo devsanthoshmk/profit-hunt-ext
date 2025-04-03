@@ -1,0 +1,18 @@
+{
+    "name": "Profit Hunter Eval",
+    "description": "Evaluates your neostox stocks",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "scripting"],
+    "manifest_version": 3,
+    "action": {
+      "default_popup": "popup/hello.html"
+    },
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://tradepanel.neostox.com/?id=*"
+      ]
+    }
+  ]
+  }

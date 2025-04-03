@@ -1,0 +1,82 @@
+<html>
+  <style>
+    body {
+      width: 400px;
+      height: 500px;
+    }
+    
+    :root {
+      --primary: #3a86ff;
+      --secondary: #ff006e;
+      --tertiary: #8338ec;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --correct: #38b000;
+      --incorrect: #d00000;
+      --highlight: #ffbe0b;
+    }
+    .content-container {
+      height: 86%;
+      position: relative;
+      background: rgb(196 196 214 / 85%);
+      backdrop-filter: blur(2px);
+      border-radius: 10px;
+      padding: 2rem;
+      width: 84%;
+      /* max-width: 1000px; */
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(45deg, var(--primary), var(--tertiary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 700;
+  }
+  .start-button {
+    background: linear-gradient(45deg, var(--tertiary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+      
+  .start-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+  }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-40px); }
+      100% { transform: translateY(0px); }
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  </style>
+  <body>
+    <div class="content-container">
+        <h1>Hello Traders</h1>
+        <button id="getDataButton" class="start-button">Fetch Data</button>
+    </div>
+
+
+    <script src="popup.js"></script>
+    <script src="particles.js"></script>
+  </body>
+  
+</html>
