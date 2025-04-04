@@ -20,3 +20,9 @@ console.log(buy_investment,total_buy_investment);
 console.log(sell_price,total_sell_price);
 console.log(total_sell_price-total_buy_investment);
 
+
+
+// DISQUALIFICAION CRITIRIA
+//  number of trades
+console.log(table.rows.length);
+console.log(total_buy_investment);
