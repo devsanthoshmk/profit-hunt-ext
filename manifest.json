@@ -11,7 +11,7 @@
     {
       "js": ["scripts/content.js"],
       "matches": [
-        "https://tradepanel.neostox.com/?id=*"
+        "<all_urls>"
       ]
     }
   ]
