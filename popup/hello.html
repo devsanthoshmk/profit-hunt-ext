@@ -36,25 +36,25 @@
       text-align: center;
       margin-bottom: 1rem;
       font-weight: 700;
-  }
-  .start-button {
-    background: linear-gradient(45deg, var(--tertiary), var(--secondary));
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 2rem;
-    transition: all 0.3s;
-    font-weight: bold;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  }
+    }
+    .start-button {
+      background: linear-gradient(45deg, var(--tertiary), var(--secondary));
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: all 0.3s;
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
       
-  .start-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-  }
+    .start-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+    }
 
     @keyframes float {
       0% { transform: translateY(0px); }
@@ -67,16 +67,78 @@
       opacity: 0.4;
       pointer-events: none;
     }
+    
+    /* Table styles */
+    .data-table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .data-table th, .data-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .data-table th {
+      background: linear-gradient(45deg, var(--primary), var(--tertiary));
+      color: white;
+      font-weight: 600;
+    }
+    
+    .data-table tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .data-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .placeholder {
+      color: #888;
+      font-style: italic;
+    }
   </style>
   <body>
     <div class="content-container">
         <h1>Hello Traders</h1>
+        
+        <!-- Table with header columns and placeholder values -->
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Details</th>
+              <th>Values</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Amount Invested</td>
+              <td class="placeholder" id="amountInvested">&lt;placeholder&gt;</td>
+            </tr>
+            <tr>
+              <td>2. Profit/Loss</td>
+              <td class="placeholder" id="profitLoss">&lt;placeholder&gt;</td>
+            </tr>
+            <tr>
+              <td>3. Stocks</td>
+              <td class="placeholder" id="stocks">&lt;placeholder&gt;</td>
+            </tr>
+            <tr>
+              <td>4. No. of Trades</td>
+              <td class="placeholder" id="trades">&lt;placeholder&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+        
         <button id="getDataButton" class="start-button">Fetch Data</button>
     </div>
-
 
     <script src="popup.js"></script>
     <script src="particles.js"></script>
   </body>
-  
 </html>
