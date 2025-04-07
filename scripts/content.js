@@ -30,7 +30,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     console.log(sell_price,total_sell_price);
     console.log(pl);
 
-    console.log(table.rows.length);
+    console.log(table.rows.length-1,"is no. of trades");
     dis_trade=[...new Set(dis_trade)]
     console.log("dis trade",dis_trade);
     console.log(total_buy_investment);
@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       sellPrice:total_sell_price,
       PL:pl,
       discrit:dis_trade,
-      trades:table.rows.length
+      trades:table.rows.length-1
     }
    });
 
