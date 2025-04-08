@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // contentContainer.style.display = 'none';
   
   // Correct password - change this to your desired password
-  const correctPassword = "dhanushmohith";
+  const correctPassword = "traderstechvista";
   
   submitButton.addEventListener('click', checkPassword);
   passwordInput.addEventListener('keypress', function(e) {
